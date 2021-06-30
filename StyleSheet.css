@@ -1,17 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 .container{
     margin: 80px;
-    background-color: lightsteelblue;
+    margin-top: 10px;
+    background-color: rgb(152, 186, 231);
+    border-radius: 6px;
+    padding: 15px;
+}
+#start {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: 80px;
+    width: 160px;
+    font-size: 23px;
+    font-family:'Press Start 2P', cursive;
+    border-radius: 6px;
+    background-color: rgb(245, 232, 217);
+    border: none;
+    margin-bottom: 20px;
+}
+#start:hover {
+    background-color: orange;
 }
 #Box1, #Box2, #Box3, #Box4, #Box5, #Box6, #Box7, #Box8, #Box9, #Box10, #Box11, #Box12, #Box13, #Box14, #Box15, #Box16 {
     background-color: cornflowerblue;
-    text-align-last: center;
+    text-align: center;
     padding: 80px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family:'Press Start 2P', cursive;
+    border-radius: 6px;
+    color: black;
 }
+
 #Box1, #Box2, #Box3, #Box4{
     margin-top: 10px;
 }
 #level{
     font-size: 40px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 20px;
+    text-align: center;
+    font-family:'Press Start 2P', cursive;
+}
+#title {
+    font-weight: bold;
+    font-size: 60px;
+}
+
+#title, #Explanation{
+    margin: 20px;
+    text-align: center;
+    font-family:'Press Start 2P', cursive;
+    color: rgb(245, 232, 217);
+}
+#flash {
+    font-family:'Press Start 2P', cursive;
+}
+#start, #level, #flash {
+    color: black;
 }
