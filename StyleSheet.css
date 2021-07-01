@@ -1,17 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-.container{
-    margin: 80px;
-    margin-top: 10px;
-    background-color: rgb(152, 186, 231);
-    border-radius: 6px;
-    padding: 15px;
+/*Top (Title, Explanation, Buttons)*/
+#credit {
+    text-align: center;
+    color:rgb(152, 186, 231);
+    font-family:'Press Start 2P', cursive;
+    font-style: italic;
+    font-size: 10px;
 }
+
 #start, #reset {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: auto;
+    margin:auto;
     height: 80px;
     width: 160px;
     font-size: 23px;
@@ -21,33 +23,16 @@
     border: none;
     margin-bottom: 20px;
 }
+
 #start:hover, #reset:hover {
     background-color: rgb(238, 132, 90);
     color: rgb(245, 232, 217);
 }
 
-#Box1, #Box2, #Box3, #Box4, #Box5, #Box6, #Box7, #Box8, #Box9, #Box10, #Box11, #Box12, #Box13, #Box14, #Box15, #Box16 {
-    background-color: cornflowerblue;
-    text-align: center;
-    padding: 80px;
-    font-family:'Press Start 2P', cursive;
-    border-radius: 6px;
-    color: black;
-}
-
-#Box1, #Box2, #Box3, #Box4{
-    margin-top: 10px;
-}
-#level{
-    font-size: 40px;
-    margin: 20px;
-    text-align: center;
-    font-family:'Press Start 2P', cursive;
-}
 #title {
     font-weight: bold;
     font-size: 60px;
-    padding: 10px;
+    padding-top: 15px;
     color: rgb(252, 196, 143);
 }
 
@@ -57,19 +42,65 @@
     font-family:'Press Start 2P', cursive;
 }
 
+#How2Play {
+    color:rgb(238, 132, 90);
+}
+
+#yellow {
+    color: rgb(252, 196, 143);
+}
+
 #Explanation {
     background-color:rgba(16, 54, 77, 0.829);
     padding: 30px;
     margin-bottom: 30px;
     color: rgb(245, 232, 217);
 }
-#flash {
-    font-family:'Press Start 2P', cursive;
-}
-#start, #level, #flash, #reset {
-    color: black;
+
+/*Game Content*/
+.container{
+    margin: 80px;
+    margin-top: 10px;
+    background-color: rgb(152, 186, 231);
+    border-radius: 6px;
+    padding: 15px;
 }
 
-#Box1:hover, #Box2:hover, #Box3:hover, #Box4:hover, #Box5:hover, #Box6:hover, #Box7:hover, #Box8:hover, #Box9:hover, #Box10:hover, #Box11:hover, #Box12:hover, #Box13:hover, #Box14:hover, #Box15:hover, #Box16:hover{
-    background-color:lightcyan;
+#Box1, #Box2, #Box3, #Box4, #Box5, #Box6, #Box7, #Box8, #Box9, #Box10, #Box11, #Box12, #Box13, #Box14, #Box15, #Box16 {
+    background-color:cornflowerblue;
+    text-align: center;
+    padding: 80px;
+    font-family:'Press Start 2P', cursive;
+    border-radius: 6px;
+    color: rgba(16, 54, 77, 0.829);
+}
+
+#Box1, #Box2, #Box3, #Box4{
+    margin-top: 10px;
+}
+
+#level{
+    font-size: 40px;
+    margin: 20px;
+    text-align: center;
+    font-family:'Press Start 2P', cursive;
+}
+
+#start, #level, #reset {
+    color: rgba(16, 54, 77, 0.829);
+}
+
+#gameOver{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: rgb(252, 196, 143);
+    background-color: rgb(226, 76, 57);
+    padding: 40px;
+    border-radius: 20px;
+    z-index: 20;
+    font-size: 40px;
+    font-family:'Press Start 2P', cursive;
 }
