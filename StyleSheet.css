@@ -7,7 +7,7 @@
     border-radius: 6px;
     padding: 15px;
 }
-#start {
+#start, #reset {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,9 +21,11 @@
     border: none;
     margin-bottom: 20px;
 }
-#start:hover {
-    background-color: orange;
+#start:hover, #reset:hover {
+    background-color: rgb(238, 132, 90);
+    color: rgb(245, 232, 217);
 }
+
 #Box1, #Box2, #Box3, #Box4, #Box5, #Box6, #Box7, #Box8, #Box9, #Box10, #Box11, #Box12, #Box13, #Box14, #Box15, #Box16 {
     background-color: cornflowerblue;
     text-align: center;
@@ -45,17 +47,29 @@
 #title {
     font-weight: bold;
     font-size: 60px;
+    padding: 10px;
+    color: rgb(252, 196, 143);
 }
 
 #title, #Explanation{
     margin: 20px;
     text-align: center;
     font-family:'Press Start 2P', cursive;
+}
+
+#Explanation {
+    background-color:rgba(16, 54, 77, 0.829);
+    padding: 30px;
+    margin-bottom: 30px;
     color: rgb(245, 232, 217);
 }
 #flash {
     font-family:'Press Start 2P', cursive;
 }
-#start, #level, #flash {
+#start, #level, #flash, #reset {
     color: black;
+}
+
+#Box1:hover, #Box2:hover, #Box3:hover, #Box4:hover, #Box5:hover, #Box6:hover, #Box7:hover, #Box8:hover, #Box9:hover, #Box10:hover, #Box11:hover, #Box12:hover, #Box13:hover, #Box14:hover, #Box15:hover, #Box16:hover{
+    background-color:lightcyan;
 }
