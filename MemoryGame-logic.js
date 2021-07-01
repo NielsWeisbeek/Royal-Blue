@@ -34,7 +34,6 @@ function checkClick(clickedItem){
 // ask for help on if statement
 //Functions:
 function reset(){
-    randomSquares=possibleSquares.sort(()=>Math.random() - 0.5)
     winCount = 0;
     levelNumber = 1;
     boxLevel = 0;
