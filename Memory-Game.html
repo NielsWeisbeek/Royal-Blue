@@ -11,21 +11,29 @@
 <body>
     <style>body{background-color: rgb(43, 92, 124);}</style>
     <h1 id="title">MEMORY GAME</h2>
-    <p id="Explanation">How to Play: Boxes will flash on the screen, your job is to click the correct pattern of boxes on a certain given flash. Boxes will increase in quantity as you progress.</p>
-    <button id="start" onclick="start()">START</button><span><button id="reset" onclick="reset()">RESET</button></span>
+    <p id="credit">by Team Royal Blue</p>
+    <p id="Explanation"><span id="How2Play">How to Play:</span> Boxes will flash on the screen, your job is to click the correct pattern of boxes <span id="yellow">in successive order</span> on each level. Boxes will increase in quantity as you progress.</p>
+    <div class="buttons">
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-2"><button id="start" onclick="start()">START</button></div>
+            <div class="col-2"><button id="reset" onclick="reset();restart()">RESET</button></div>
+            <div class="col-4"></div>
+        </div>
+    </div>
     <div class="container">
         <div class="row">
             <div class="col-2">
-                <p class="box"id="Box1">1</p>
+                <p class="box" id="Box1">1</p>
             </div>
             <div class="col-2">
-                <p class="box"id="Box2">2</p>
+                <p class="box" id="Box2">2</p>
             </div>
             <div class="col-2">
-                <p class="box"id="Box3">3</p>
+                <p class="box" id="Box3">3</p>
             </div>
             <div class="col-2">
-                <p class="box"id="Box4">4</p>
+                <p class="box" id="Box4">4</p>
             </div>
             <div class="col-2">
                 <p id="level">Level: </p>
@@ -33,30 +41,30 @@
         </div>
         <div class="row">
             <div class="col-2">
-                <p class="box"id="Box5">5</p>
+                <p class="box" id="Box5">5</p>
             </div>
             <div class="col-2">
-                <p class="box"id="Box6">6</p>
+                <p class="box" id="Box6">6</p>
             </div>
             <div class="col-2">
-                <p class="box"id="Box7">7</p>
+                <p class="box" id="Box7">7</p>
             </div>
             <div class="col-2">
-                <p class="box"id="Box8">8</p>
+                <p class="box" id="Box8">8</p>
             </div>
         </div>
         <div class="row">
             <div class="col-2">
-                <p class="box"id="Box9">9</p>
+                <p class="box" id="Box9">9</p>
             </div>
             <div class="col-2">
-                <p class="box"id="Box10">10</p>
+                <p class="box" id="Box10">10</p>
             </div>
             <div class="col-2">
-                <p class="box"id="Box11">11</p>
+                <p class="box" id="Box11">11</p>
             </div>
             <div class="col-2">
-                <p class="box"id="Box12">12</p>
+                <p class="box" id="Box12">12</p>
             </div>
             <div class="col-2">
                 <!-- <p id="flash">Pick the boxes for flash number:</p> -->
@@ -64,20 +72,20 @@
         </div>
         <div class="row">
             <div class="col-2">
-                <p class="box"id="Box13">13</p>
+                <p class="box" id="Box13">13</p>
             </div>
             <div class="col-2">
-                <p class="box"id="Box14">14</p>
+                <p class="box" id="Box14">14</p>
             </div>
             <div class="col-2">
-                <p class="box"id="Box15">15</p>
+                <p class="box" id="Box15">15</p>
             </div>
             <div class="col-2">
-                <p class="box"id="Box16">16</p>
+                <p class="box" id="Box16">16</p>
             </div>
         </div>
     </div>
-    <script src="MemoryGame-logic.js"></script>
+    <script src="MemoryGame-logic-.js"></script>
 </body>
 
 </html>
