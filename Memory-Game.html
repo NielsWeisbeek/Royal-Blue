@@ -4,15 +4,15 @@
     <link rel="stylesheet" href="StyleSheet.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script
-src="https://code.jquery.com/jquery-3.6.0.js"
+    src="https://code.jquery.com/jquery-3.6.0.js"
   integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
   crossorigin="anonymous"></script>
 </head>
 <body>
-    <style>body{background-color: rgb(50, 100, 156);}</style>
+    <style>body{background-color: rgb(43, 92, 124);}</style>
     <h1 id="title">MEMORY GAME</h2>
     <p id="Explanation">How to Play: Boxes will flash on the screen, your job is to click the correct pattern of boxes on a certain given flash. Boxes will increase in quantity as you progress.</p>
-    <button id="start" onclick="start()">START</button>
+    <button id="start" onclick="start()">START</button><span><button id="reset" onclick="reset()">RESET</button></span>
     <div class="container">
         <div class="row">
             <div class="col-2">
@@ -28,7 +28,7 @@ src="https://code.jquery.com/jquery-3.6.0.js"
                 <p class="box"id="Box4">4</p>
             </div>
             <div class="col-2">
-                <p id="level">Level: 0</p>
+                <p id="level">Level: </p>
             </div>
         </div>
         <div class="row">
@@ -59,7 +59,7 @@ src="https://code.jquery.com/jquery-3.6.0.js"
                 <p class="box"id="Box12">12</p>
             </div>
             <div class="col-2">
-                <p id="flash">Pick the boxes for flash number:</p>
+                <!-- <p id="flash">Pick the boxes for flash number:</p> -->
             </div>
         </div>
         <div class="row">
@@ -77,7 +77,7 @@ src="https://code.jquery.com/jquery-3.6.0.js"
             </div>
         </div>
     </div>
-    <script src="MemoryGame-logic.js"></script>
+    <script src="MemoryGame-logic-.js"></script>
 </body>
 
 </html>
