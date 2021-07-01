@@ -8,18 +8,24 @@
 
 //Variables:
 var possibleSquares=["Box1","Box2","Box3","Box4","Box5","Box6","Box7","Box8","Box9","Box10","Box11","Box12","Box13","Box14","Box15","Box16"];
+var randomSquares=possibleSquares
 var winCount = 0;
-var flashNumber = 0;
 var levelNumber = 1;
 var boxLevel = 0;
 var index = 0;
-var index = 0;
 var clickedItem = 0;
+var counter = 0;
 function checkClick(clickedItem){
-    if (clickedItem === possibleSquares[index]) {
-        levelNumber++;
+    if (clickedItem === randomSquares[index]) {
+        index++;
+        counter++;
+        if(counter===levelNumber){
+            index=0;
+            levelNumber++;
+            counter=0;
+            setTimeout(game,1000);
+        }
         document.getElementById("level").innerHTML="Level:"+levelNumber;
-        setTimeout(game,3000);
     } 
     else {
         reset(); 
@@ -28,44 +34,30 @@ function checkClick(clickedItem){
 // ask for help on if statement
 //Functions:
 function reset(){
+    randomSquares=possibleSquares.sort(()=>Math.random() - 0.5)
     winCount = 0;
-    flashNumber = 0;
     levelNumber = 1;
     boxLevel = 0;
     index = 0;
     clickedItem = 0;
     document.getElementById("level").innerHTML="Level:" + levelNumber;
-    document.getElementById("flash").innerHTML="Pick the boxes for flash number:";
 }
 function start(){
+    randomSquares=possibleSquares.sort(()=>Math.random() - 0.5)
     document.getElementById("level").innerHTML="Level:" + levelNumber;
     game();
 }
 function game(){
-    flashNumber = Math.floor(Math.random()*3)+1;
-    document.getElementById("flash").innerHTML="Pick the boxes for flash number:" + flashNumber;
     pickBox();
     setTimeout(pickBoxStop,1000);
 }
 function pickBox(){
-    if (levelNumber<=2){
-    index = Math.floor(Math.random()*16);
-    document.getElementById(possibleSquares[index]).style.backgroundColor="white"
-    }
-    if (levelNumber>2){
-    index = Math.floor(Math.random()*16)
-    index2 = Math.floor(Math.random()*16)
-    if (index2===index && index2!=16){
-        index2++
-    }
-    if (index2===index && index2!=16){
-        index2--
-    }
-    document.getElementById(possibleSquares[index]).style.backgroundColor="white"
-    document.getElementById(possibleSquares[index2]).style.backgroundColor="white"
-    }
+    for (let i = 0; i<levelNumber; i++)
+        document.getElementById(randomSquares[i]).style.backgroundColor="white"
+    }  
+
     
-}
+
 function pickBoxStop(){
     var boxElements = document.getElementsByClassName("box")
     console.log(boxElements)
