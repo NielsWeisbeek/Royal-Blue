@@ -15,6 +15,7 @@ var boxLevel = 0;
 var index = 0;
 var clickedItem = 0;
 var counter = 0;
+var gameOver = 0;
 function checkClick(clickedItem){
     if (clickedItem === randomSquares[index]) {
         index++;
@@ -28,11 +29,26 @@ function checkClick(clickedItem){
         document.getElementById("level").innerHTML="Level:"+levelNumber;
     } 
     else {
-        reset(); 
+        gameOver=document.createElement("div");
+        gameOver.innerHTML="Game over. Press the reset button to restart!"
+        document.body.appendChild(gameOver);
+        gameOver.setAttribute("Id","gameOver");
+        final(); 
     }
 }
 // ask for help on if statement
 //Functions:
+function restart(){
+    gameOver.remove()
+}
+function final(){
+    winCount = 0;
+    levelNumber = levelNumber;
+    boxLevel = 0;
+    index = 0;
+    clickedItem = 0;
+    document.getElementById("level").innerHTML="Level:" + levelNumber;
+}
 function reset(){
     winCount = 0;
     levelNumber = 1;
@@ -50,12 +66,12 @@ function game(){
     pickBox();
     setTimeout(pickBoxStop,1000);
 }
+
 function pickBox(){
-    for (let i = 0; i<levelNumber; i++)
+    for (let i = 0; i<levelNumber; i++){
         document.getElementById(randomSquares[i]).style.backgroundColor="white"
     }  
-
-    
+}
 
 function pickBoxStop(){
     var boxElements = document.getElementsByClassName("box")
@@ -152,5 +168,12 @@ function pickBoxStop(){
         clickedItem = "Box16"
         checkClick(clickedItem);
     });
+    $(".box").hover(function(){
+        $(this).css("background-color", "lightsteelblue");
+        }, function(){
+        $(this).css("background-color", "cornflowerblue");
+    });
+    
+   
        //end section. 
 //}}
