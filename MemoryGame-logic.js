@@ -9,9 +9,7 @@
 //Variables:
 var possibleSquares=["Box1","Box2","Box3","Box4","Box5","Box6","Box7","Box8","Box9","Box10","Box11","Box12","Box13","Box14","Box15","Box16"];
 var randomSquares=possibleSquares
-var winCount = 0;
 var levelNumber = 1;
-var boxLevel = 0;
 var index = 0;
 var clickedItem = 0;
 var counter = 0;
@@ -30,7 +28,7 @@ function checkClick(clickedItem){
     } 
     else {
         gameOver=document.createElement("div");
-        gameOver.innerHTML="Game over. Press the reset button to restart!"
+        gameOver.innerHTML="Game over. You reached level " + levelNumber + ". Press the reset button to restart!"
         document.body.appendChild(gameOver);
         gameOver.setAttribute("Id","gameOver");
         final(); 
@@ -42,17 +40,12 @@ function restart(){
     gameOver.remove()
 }
 function final(){
-    winCount = 0;
     levelNumber = levelNumber;
-    boxLevel = 0;
     index = 0;
-    clickedItem = 0;
     document.getElementById("level").innerHTML="Level:" + levelNumber;
 }
 function reset(){
-    winCount = 0;
     levelNumber = 1;
-    boxLevel = 0;
     index = 0;
     clickedItem = 0;
     document.getElementById("level").innerHTML="Level:" + levelNumber;
